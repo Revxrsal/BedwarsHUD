@@ -1,0 +1,16 @@
+[
+{
+  "modid": "bedwarshud",
+  "name": "Bedwars HUD",
+  "description": "A Hypixel mod which helps in tracking different statistics in bedwars.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "http://www.github.com/ReflxctionDev/BedwarsHUD",
+  "updateUrl": "",
+  "authorList": ["Reflxction"],
+  "credits": "Reflxction",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
