@@ -16,7 +16,7 @@
 package net.reflxction.bedwarshud.trackers;
 
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import net.reflxction.bedwarshud.events.bedwars.*;
+import net.reflxction.bedwarshud.events.bedwars.game.*;
 
 /**
  * The tracker for tracking the statistics (kills, bed destroyed, etc.)

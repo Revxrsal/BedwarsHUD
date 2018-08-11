@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package net.reflxction.bedwarshud.events.bedwars;
+package net.reflxction.bedwarshud.events.bedwars.game;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayer;
@@ -23,10 +23,7 @@ import net.minecraftforge.fml.common.eventhandler.Event;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.reflxction.bedwarshud.utils.BedwarsMessages;
 
-/**
- * Fired everytime the player destroys a bed
- */
-public class PlayerDestroyBedEvent extends Event {
+public class PlayerFinalKillEvent extends Event {
 
     // An instance of the bedwars messages
     private BedwarsMessages messages = new BedwarsMessages();
@@ -38,11 +35,11 @@ public class PlayerDestroyBedEvent extends Event {
     public void onClientChatReceived(ClientChatReceivedEvent event) {
         String text = event.message.getUnformattedText();
         if (getName() == null) return;
-        if (!text.contains(getName())) return; // Means it's not the player
-        if (!text.startsWith("BED DESTRUCTION >")) return; // Means it's not a bed destruction message
-        for (String bedMessage : messages.getBedDestroysMessages()) {
-            if (text.startsWith("BED DESTRUCTION >") && text.contains(bedMessage) && text.replace("!", "").endsWith(getName())) {
-                MinecraftForge.EVENT_BUS.post(new PlayerDestroyBedEvent());
+        if (!text.contains(getName())) return;
+        if (text.startsWith(getName())) return; // Means the player died and not actually got the kill
+        for (String kill : messages.getKillMessages()) {
+            if (text.contains(kill + " " + getName()) && text.endsWith("FINAL KILL!")) {
+                MinecraftForge.EVENT_BUS.post(new PlayerFinalKillEvent());
                 break;
             }
         }
@@ -56,4 +53,5 @@ public class PlayerDestroyBedEvent extends Event {
     private String getName() {
         return Minecraft.getMinecraft().thePlayer == null ? null : Minecraft.getMinecraft().thePlayer.getName();
     }
+
 }

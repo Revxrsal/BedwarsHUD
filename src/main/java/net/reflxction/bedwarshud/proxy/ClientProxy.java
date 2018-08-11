@@ -22,7 +22,7 @@ import net.reflxction.bedwarshud.BedwarsHUD;
 import net.reflxction.bedwarshud.commands.BHUDCommand;
 import net.reflxction.bedwarshud.elements.ElementManager;
 import net.reflxction.bedwarshud.elements.resources.*;
-import net.reflxction.bedwarshud.events.bedwars.*;
+import net.reflxction.bedwarshud.events.bedwars.game.*;
 import net.reflxction.bedwarshud.events.mod.RenderHUDEvent;
 import net.reflxction.bedwarshud.gui.menus.InformationMenu;
 import net.reflxction.bedwarshud.gui.menus.ResourcesMenu;

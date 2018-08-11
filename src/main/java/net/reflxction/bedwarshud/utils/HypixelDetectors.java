@@ -20,7 +20,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent.ClientTickEvent;
 import net.minecraftforge.fml.common.network.FMLNetworkEvent.ClientConnectedToServerEvent;
 import net.minecraftforge.fml.common.network.FMLNetworkEvent.ClientDisconnectionFromServerEvent;
-import net.reflxction.bedwarshud.events.bedwars.PlayerJoinGameEvent;
+import net.reflxction.bedwarshud.events.bedwars.game.PlayerJoinGameEvent;
 
 /**
  * Utility class for doing Hypixel checks
