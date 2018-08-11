@@ -43,9 +43,9 @@ public abstract class Element extends GuiButton {
     // Whether the element is enabled or not
     private boolean enabled = true;
 
-    // Local positions for the element. Those are used to update positions of the element when being mvoed
-    public int x;
-    public int y;
+    // Local positions for the element. Those are used to update positions of the element when being moved
+    int x;
+    int y;
 
     /**
      * Initiates a new Element.
@@ -64,7 +64,7 @@ public abstract class Element extends GuiButton {
      *
      * @return True if the element is being moved or not
      */
-    public boolean isBeingMoved() {
+    boolean isBeingMoved() {
         return beingMoved;
     }
 
@@ -73,7 +73,7 @@ public abstract class Element extends GuiButton {
      *
      * @param beingMoved New state
      */
-    public void setBeingMoved(boolean beingMoved) {
+    void setBeingMoved(boolean beingMoved) {
         this.beingMoved = beingMoved;
     }
 
@@ -89,7 +89,7 @@ public abstract class Element extends GuiButton {
      *
      * @param enabled New value of {@link Element#enabled}
      */
-    public void setEnabled(boolean enabled) {
+    void setEnabled(boolean enabled) {
         this.enabled = enabled;
         BedwarsHUD.getConfig().get(getSimpleName(), "Enabled", false).set(enabled);
         BedwarsHUD.getConfig().save();
@@ -98,7 +98,7 @@ public abstract class Element extends GuiButton {
     /**
      * Saves all the element information to the config file
      */
-    public void saveToConfig() {
+    void saveToConfig() {
         BedwarsHUD.getConfig().get(getSimpleName(), "X", 50)
                 .set(xPosition);
         BedwarsHUD.getConfig().get(getSimpleName(), "Y", 50)
@@ -112,7 +112,7 @@ public abstract class Element extends GuiButton {
     /**
      * Updates the {@link #x} and {@link #y} variables from the config
      */
-    public void updatePosition() {
+    void updatePosition() {
         x = xPosition = BedwarsHUD.getConfig().get(getSimpleName(), "X", 50).getInt();
         y = yPosition = BedwarsHUD.getConfig().get(getSimpleName(), "Y", 50).getInt();
     }
@@ -189,8 +189,9 @@ public abstract class Element extends GuiButton {
 
     @SubscribeEvent
     public void onRenderHUD(RenderHUDEvent event) {
-        if (!enabled) return;
         if (Minecraft.getMinecraft().gameSettings.showDebugInfo) return;
-        draw();
+        if (isEnabled()) {
+            draw();
+        }
     }
 }

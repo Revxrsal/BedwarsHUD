@@ -84,7 +84,7 @@ public class HypixelDetectors {
     public void onTickServerTick(ClientTickEvent event) {
         if (!hypixel()) return;
         if (mc.theWorld != null && mc.theWorld.getScoreboard() != null && mc.theWorld.getScoreboard().getObjectiveInDisplaySlot(1).getDisplayName() != null) {
-            String firstLine = mc.theWorld.getScoreboard().getObjectiveInDisplaySlot(1).getDisplayName().toLowerCase();
+            String firstLine = mc.theWorld.getScoreboard().getObjectiveInDisplaySlot(1).getDisplayName();
             bedwars = firstLine.contains("BED ");
         }
     }
