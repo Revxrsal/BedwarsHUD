@@ -30,6 +30,7 @@ import net.reflxction.bedwarshud.gui.menus.ResourcesMenu;
 import net.reflxction.bedwarshud.gui.menus.StatisticsMenu;
 import net.reflxction.bedwarshud.gui.menus.UpgradesMenu;
 import net.reflxction.bedwarshud.gui.page.PageRegistry;
+import net.reflxction.bedwarshud.statistics.*;
 import net.reflxction.bedwarshud.trackers.StatisticsTracker;
 import net.reflxction.bedwarshud.updater.NotificationSender;
 import net.reflxction.bedwarshud.updater.VersionChecker;
@@ -109,7 +110,12 @@ public class ClientProxy implements IProxy {
                 new ElementIron(),
                 new ElementEmeralds(),
                 new ElementArrows(),
-                new ElementWool());
+                new ElementWool(),
+                new ElementCoinsEarned(),
+                new ElementDeaths(),
+                new ElementFinalKills(),
+                new ElementKills(),
+                new ElementKillStreak());
     }
 
 

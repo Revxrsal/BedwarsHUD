@@ -22,6 +22,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.reflxction.bedwarshud.BedwarsHUD;
 import net.reflxction.bedwarshud.events.mod.RenderHUDEvent;
 import net.reflxction.bedwarshud.trackers.ResourcesTracker;
+import net.reflxction.bedwarshud.trackers.StatisticsTracker;
 import net.reflxction.bedwarshud.utils.ChatColor;
 
 import java.awt.*;
@@ -42,6 +43,9 @@ public abstract class Element extends GuiButton {
 
     // Whether the element is enabled or not
     private boolean enabled = true;
+
+    // Statistics tracker
+    protected StatisticsTracker tracker = new StatisticsTracker();
 
     // Local positions for the element. Those are used to update positions of the element when being moved
     int x;
