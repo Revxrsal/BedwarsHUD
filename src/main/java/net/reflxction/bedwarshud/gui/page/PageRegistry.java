@@ -30,6 +30,7 @@ public class PageRegistry {
         pagesList.addAll(Arrays.asList(pages));
     }
 
+    @SuppressWarnings("WeakerAccess")
     public static List<Page> getPages() {
         return pagesList;
     }

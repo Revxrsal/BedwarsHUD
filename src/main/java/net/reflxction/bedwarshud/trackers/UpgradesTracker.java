@@ -20,12 +20,105 @@ package net.reflxction.bedwarshud.trackers;
  */
 public class UpgradesTracker {
 
-    // If sharpened swords is bought, if dragon buff is bought
-    private boolean sharpenedSwords, dragonBuff;
+    // If sharpened swords is bought, if dragon buff is bought, if heal pool is bought, if a trap is activated
+    private boolean sharpenedSwords, dragonBuff, healPool, trapActivated;
 
-    // The reinforced armor enchantment level
-    private int reinforcedArmor;
+    // The reinforced armor enchantment level, the haste level
+    private int reinforcedArmor, miniacMiner;
 
+    /**
+     * Whether the player has bought sharpened swords or not
+     *
+     * @return Whether the player has bought sharpened swords or not
+     */
+    public boolean isSharpenedSwords() {
+        return sharpenedSwords;
+    }
 
+    /**
+     * Whether dragon buff is bought or not
+     *
+     * @return Whether dragon buff is bought or not
+     */
+    public boolean isDragonBuff() {
+        return dragonBuff;
+    }
 
+    /**
+     * Whether heal pool is bought or not
+     *
+     * @return Whether heal pool is bought or not
+     */
+    public boolean isHealPool() {
+        return healPool;
+    }
+
+    /**
+     * Whether a trap is active or not
+     *
+     * @return Whether a trap is activated or not
+     */
+    public boolean isTrapActivated() {
+        return trapActivated;
+    }
+
+    /**
+     * The current reinforced armor level
+     *
+     * @return The current reinforced armor level
+     */
+    public int getReinforcedArmor() {
+        return reinforcedArmor;
+    }
+
+    /**
+     * The current miniac miner level
+     *
+     * @return The current miniac miner level
+     */
+    public int getMiniacMiner() {
+        return miniacMiner;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    private void setSharpenedSwords(boolean sharpenedSwords) {
+        this.sharpenedSwords = sharpenedSwords;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    private void setDragonBuff(boolean dragonBuff) {
+        this.dragonBuff = dragonBuff;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    private void setHealPool(boolean healPool) {
+        this.healPool = healPool;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    private void setTrapActivated(boolean trapActivated) {
+        this.trapActivated = trapActivated;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    private void setReinforcedArmor(int reinforcedArmor) {
+        this.reinforcedArmor = reinforcedArmor;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    private void setMiniacMiner(int miniacMiner) {
+        this.miniacMiner = miniacMiner;
+    }
 }

@@ -25,4 +25,9 @@ public interface Tracker {
     // Instance of Minecraft
     Minecraft mc = Minecraft.getMinecraft();
 
+    /**
+     * Resets all the elements in the HUD. This should be called in {@link net.reflxction.bedwarshud.events.bedwars.game.GameEndEvent}.
+     */
+    void resetAll();
+
 }
