@@ -23,6 +23,7 @@ import net.reflxction.bedwarshud.commands.BHUDCommand;
 import net.reflxction.bedwarshud.elements.ElementManager;
 import net.reflxction.bedwarshud.elements.resources.*;
 import net.reflxction.bedwarshud.events.bedwars.game.*;
+import net.reflxction.bedwarshud.events.bedwars.upgrades.TrapEvent;
 import net.reflxction.bedwarshud.events.mod.RenderHUDEvent;
 import net.reflxction.bedwarshud.gui.menus.InformationMenu;
 import net.reflxction.bedwarshud.gui.menus.ResourcesMenu;
@@ -85,6 +86,7 @@ public class ClientProxy implements IProxy {
         MinecraftForge.EVENT_BUS.register(new PlayerDieEvent());
         MinecraftForge.EVENT_BUS.register(new PlayerJoinGameEvent());
         MinecraftForge.EVENT_BUS.register(new GameEndEvent());
+        MinecraftForge.EVENT_BUS.register(new TrapEvent());
     }
 
     /**
