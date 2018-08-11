@@ -13,20 +13,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package net.reflxction.bedwarshud.elements.elements.resources;
+package net.reflxction.bedwarshud.elements.resources;
 
 import net.minecraft.init.Items;
-import net.reflxction.bedwarshud.elements.element.Element;
+import net.reflxction.bedwarshud.elements.Element;
 
 import java.awt.*;
 
-public class ElementEmeralds extends Element {
+public class ElementDiamonds extends Element {
 
-    /**
-     * Initiates a new Element.
-     */
-    public ElementEmeralds() {
-        super(4);
+    public ElementDiamonds() {
+        super(3);
     }
 
     /**
@@ -34,7 +31,7 @@ public class ElementEmeralds extends Element {
      */
     @Override
     public String getSimpleName() {
-        return "Emeralds";
+        return "Diamond";
     }
 
     /**
@@ -42,6 +39,6 @@ public class ElementEmeralds extends Element {
      */
     @Override
     public void draw() {
-        drawString("Emeralds: &2x" + resourceTracker.getAmountOf(Items.emerald), new Color(42, 255, 94));
+        drawString("Diamonds: &9x" + resourceTracker.getAmountOf(Items.diamond), new Color(29, 255, 233));
     }
 }

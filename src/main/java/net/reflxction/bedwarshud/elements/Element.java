@@ -13,14 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package net.reflxction.bedwarshud.elements.element;
+package net.reflxction.bedwarshud.elements;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.audio.SoundHandler;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.reflxction.bedwarshud.BedwarsHUD;
-import net.reflxction.bedwarshud.elements.gui.MoveElementGUI;
 import net.reflxction.bedwarshud.events.mod.RenderHUDEvent;
 import net.reflxction.bedwarshud.trackers.ResourcesTracker;
 import net.reflxction.bedwarshud.utils.ChatColor;

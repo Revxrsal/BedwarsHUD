@@ -18,7 +18,7 @@ package net.reflxction.bedwarshud.gui.buttons;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.ScaledResolution;
-import net.reflxction.bedwarshud.elements.element.Element;
+import net.reflxction.bedwarshud.elements.Element;
 import net.reflxction.bedwarshud.utils.ChatColor;
 
 import java.util.ArrayList;

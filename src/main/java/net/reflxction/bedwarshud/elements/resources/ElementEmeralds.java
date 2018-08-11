@@ -13,21 +13,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package net.reflxction.bedwarshud.elements.elements.resources;
+package net.reflxction.bedwarshud.elements.resources;
 
-import net.minecraft.init.Blocks;
-import net.minecraft.item.ItemStack;
-import net.reflxction.bedwarshud.elements.element.Element;
+import net.minecraft.init.Items;
+import net.reflxction.bedwarshud.elements.Element;
 
 import java.awt.*;
 
-public class ElementWool extends Element {
+public class ElementEmeralds extends Element {
 
     /**
      * Initiates a new Element.
      */
-    public ElementWool() {
-        super(6);
+    public ElementEmeralds() {
+        super(4);
     }
 
     /**
@@ -35,7 +34,7 @@ public class ElementWool extends Element {
      */
     @Override
     public String getSimpleName() {
-        return "Wool";
+        return "Emeralds";
     }
 
     /**
@@ -43,6 +42,6 @@ public class ElementWool extends Element {
      */
     @Override
     public void draw() {
-        drawString("Wool blocks: &cx" + resourceTracker.getAmountOf(new ItemStack(Blocks.wool).getItem()), new Color(68, 63, 255));
+        drawString("Emeralds: &2x" + resourceTracker.getAmountOf(Items.emerald), new Color(42, 255, 94));
     }
 }

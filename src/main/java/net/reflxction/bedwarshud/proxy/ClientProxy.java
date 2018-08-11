@@ -20,8 +20,8 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.event.*;
 import net.reflxction.bedwarshud.BedwarsHUD;
 import net.reflxction.bedwarshud.commands.BHUDCommand;
-import net.reflxction.bedwarshud.elements.element.ElementRegistry;
-import net.reflxction.bedwarshud.elements.elements.resources.*;
+import net.reflxction.bedwarshud.elements.ElementManager;
+import net.reflxction.bedwarshud.elements.resources.*;
 import net.reflxction.bedwarshud.events.bedwars.*;
 import net.reflxction.bedwarshud.events.mod.RenderHUDEvent;
 import net.reflxction.bedwarshud.gui.menus.InformationMenu;
@@ -101,7 +101,7 @@ public class ClientProxy implements IProxy {
                 new ResourcesMenu(),
                 new UpgradesMenu(),
                 new StatisticsMenu());
-        ElementRegistry.registerElements(
+        ElementManager.registerElements(
                 new ElementDiamonds(),
                 new ElementGold(),
                 new ElementIron(),

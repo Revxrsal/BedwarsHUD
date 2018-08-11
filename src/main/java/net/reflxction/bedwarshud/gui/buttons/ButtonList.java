@@ -15,7 +15,7 @@
  */
 package net.reflxction.bedwarshud.gui.buttons;
 
-import net.reflxction.bedwarshud.elements.elements.resources.*;
+import net.reflxction.bedwarshud.elements.resources.*;
 
 /**
  * The list of all buttons

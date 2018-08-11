@@ -13,11 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package net.reflxction.bedwarshud.elements.gui;
+package net.reflxction.bedwarshud.elements;
 
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.GuiScreen;
-import net.reflxction.bedwarshud.elements.element.Element;
+import net.reflxction.bedwarshud.elements.Element;
 import net.reflxction.bedwarshud.gui.menus.ResourcesMenu;
 import net.reflxction.bedwarshud.utils.ChatColor;
 
@@ -45,7 +45,7 @@ public class MoveElementGUI extends GuiScreen {
      *
      * @param element Element to open for and move
      */
-    public MoveElementGUI(Element element) {
+    MoveElementGUI(Element element) {
         this.element = element;
     }
 
