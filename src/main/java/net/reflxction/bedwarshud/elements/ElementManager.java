@@ -26,11 +26,17 @@ import java.util.TimerTask;
  */
 public class ElementManager {
 
+    /**
+     * Registers the given elements. This is used to register listeners
+     * and update the element position all the way on the game
+     *
+     * @param elements Elements to register
+     */
     public static void registerElements(Element... elements) {
         for (Element element : elements) {
             MinecraftForge.EVENT_BUS.register(element);
-		}
-		new Multithreading<>().schedule((o) -> {
+        }
+        new Multithreading<>().schedule((o) -> {
             for (Element element : elements) {
                 Timer timer = new Timer();
                 timer.schedule(new TimerTask() {
