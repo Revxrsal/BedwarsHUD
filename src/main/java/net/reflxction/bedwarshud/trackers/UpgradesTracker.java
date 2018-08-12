@@ -15,10 +15,12 @@
  */
 package net.reflxction.bedwarshud.trackers;
 
+import net.reflxction.bedwarshud.events.bedwars.game.GameEndEvent;
+
 /**
  * The tracker for tracking game upgrades (sharpened swords, generator forge, etc.)
  */
-public class UpgradesTracker {
+public class UpgradesTracker implements Tracker {
 
     // If sharpened swords is bought, if dragon buff is bought, if heal pool is bought, if a trap is activated
     private boolean sharpenedSwords, dragonBuff, healPool, trapActivated;
@@ -120,5 +122,13 @@ public class UpgradesTracker {
      */
     private void setMiniacMiner(int miniacMiner) {
         this.miniacMiner = miniacMiner;
+    }
+
+    /**
+     * Resets all the elements in the HUD. This should be called in {@link GameEndEvent}.
+     */
+    @Override
+    public void resetAll() {
+
     }
 }

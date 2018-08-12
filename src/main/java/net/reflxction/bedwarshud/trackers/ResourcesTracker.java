@@ -17,7 +17,7 @@ package net.reflxction.bedwarshud.trackers;
 
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.reflxction.bedwarshud.trackers.Tracker;
+import net.reflxction.bedwarshud.events.bedwars.game.GameEndEvent;
 
 /**
  * The tracker for tracking the amount of diamonds
@@ -34,4 +34,10 @@ public class ResourcesTracker implements Tracker {
         return count;
     }
 
+    /**
+     * Resets all the elements in the HUD. This should be called in {@link GameEndEvent}.
+     */
+    @Override
+    public void resetAll() {
+    }
 }

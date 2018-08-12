@@ -125,7 +125,8 @@ public class StatisticsTracker implements Tracker {
     /**
      * Resets all the statistics. This is used on game ends
      */
-    private void resetAll() {
+    @Override
+    public void resetAll() {
         setKillsCount(0);
         setFinalKillsCount(0);
         setKillStreak(0);
